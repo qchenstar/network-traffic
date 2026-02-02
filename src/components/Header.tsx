@@ -12,6 +12,7 @@ const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
     { id: 'dashboard', name: '态势总览' },
     { id: 'dimension', name: '维度分析' },
     { id: 'monitoring', name: '实时监控' },
+    { id: 'security', name: '流量指标' },
     { id: 'historical', name: '历史分析' },
     { id: 'report', name: '报告中心' }
   ];

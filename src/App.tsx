@@ -5,6 +5,7 @@ import DimensionAnalysis from './components/DimensionAnalysis'
 import RealTimeMonitoring from './components/RealTimeMonitoring'
 import HistoricalAnalysis from './components/HistoricalAnalysis'
 import ReportCenter from './components/ReportCenter'
+import NetworkMetrics from './components/NetworkMetrics'
 
 function App() {
   const [activeTab, setActiveTab] = useState('dashboard')
@@ -15,6 +16,7 @@ function App() {
     { id: 'dashboard', name: '态势总览', icon: '📊' },
     { id: 'dimension', name: '多维度分析', icon: '🔍' },
     { id: 'monitoring', name: '实时监控', icon: '⚡' },
+    { id: 'security', name: '流量指标', icon: '📊' },
     { id: 'historical', name: '历史分析', icon: '📈' },
     { id: 'report', name: '报告中心', icon: '📋' }
   ]
@@ -27,6 +29,8 @@ function App() {
         return <DimensionAnalysis />
       case 'monitoring':
         return <RealTimeMonitoring />
+      case 'security':
+        return <NetworkMetrics />
       case 'historical':
         return <HistoricalAnalysis />
       case 'report':
